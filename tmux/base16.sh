@@ -13,7 +13,7 @@ base09='#FE8019' # - orange
 base0A='#FABD2F' # - yellow
 base0B='#B8BB26' # - green
 base0C='#8EC07C' # - cyan
-base0D='#83a598' # - blue
+base0D='#83A598' # - blue
 base0E='#D3869B' # - purple
 base0F='#D65D0E' # - brown
 
@@ -51,5 +51,4 @@ set -g status-left "$tm_session_name"
 tm_tunes="#[bg=$base00,fg=$base0D] ♫ #(osascript -l JavaScript ~/.dotfiles/applescripts/tunes.js)"
 tm_battery="#[fg=$base0F,bg=$base00] ♥ #(battery)"
 tm_date="#[default,bg=$base00,fg=$base0C] %R"
-tm_host="#[fg=$base0E,bg=$base00] #h "
-set -g status-right "$tm_tunes $tm_battery $tm_date $tm_host"
+set -g status-right "$tm_tunes $tm_battery $tm_date"
