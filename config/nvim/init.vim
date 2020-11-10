@@ -123,9 +123,9 @@ call plug#begin('~/.config/nvim/plugged')
 
     " LightLine {{{
         Plug 'itchyny/lightline.vim'
-        Plug 'nicknisi/vim-base16-lightline'
+        Plug 'shinchu/lightline-gruvbox.vim'
         let g:lightline = {
-            \   'colorscheme': 'base16',
+            \   'colorscheme': 'gruvbox',
             \   'active': {
             \       'left': [ [ 'mode', 'paste' ],
             \               [ 'gitbranch' ],
