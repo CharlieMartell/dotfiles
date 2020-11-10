@@ -119,8 +119,7 @@ call plug#begin('~/.config/nvim/plugged')
     match ErrorMsg '^\(<\|=\|>\)\{7\}\([^=].\+\)\?$'
 
     " Load colorschemes
-    Plug 'chriskempson/base16-vim'
-    Plug 'joshdick/onedark.vim'
+    Plug 'morhetz/gruvbox'
 
     " LightLine {{{
         Plug 'itchyny/lightline.vim'
@@ -674,16 +673,7 @@ call plug#begin('~/.config/nvim/plugged')
 call plug#end()
 
 " Colorscheme and final setup {{{
-    " This call must happen after the plug#end() call to ensure
-    " that the colorschemes have been loaded
-    if filereadable(expand("~/.vimrc_background"))
-        let base16colorspace=256
-        source ~/.vimrc_background
-    else
-        let g:onedark_termcolors=16
-        let g:onedark_terminal_italics=1
-        colorscheme onedark
-    endif
+    autocmd vimenter * ++nested colorscheme gruvbox
     syntax on
     filetype plugin indent on
     " make the highlighting of tabs and other non-text less annoying
